@@ -97,7 +97,7 @@
           <tr>
             <th>IP</th>
             <th>Device</th>
-
+            <th>Decoded</th>
             <th>City</th>
             <th>Region</th>
             <th>Country</th>
@@ -139,6 +139,7 @@
             tr.innerHTML = `
               <td>${data.ip}</td>
               <td>${data.deviceModel}</td>
+               <td>${result.decoded}</td>
               <td>${data.city}</td>
               <td>${data.region}</td>
               <td>${data.country}</td>

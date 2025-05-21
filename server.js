@@ -64,10 +64,10 @@ app.post("/getInfo", async (req, res) => {
   let city = "-";
   let region = "-";
   let country = "-";
-  // await new Promise((resolve) => setTimeout(resolve, 1500));  // wait 1.5 seconds
+  await new Promise((resolve) => setTimeout(resolve, 1500)); // wait 1.5 seconds
 
   try {
-    const response = await axios.get(`https://ip-api.com/json/${ip}`);
+    const response = await axios.get(`http://ip-api.com/json/${ip}`);
     const data = response.data;
     if (data.status === "success") {
       city = data.city || "-";
